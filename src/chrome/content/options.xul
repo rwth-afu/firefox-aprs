@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+  <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+    <prefwindow      title="RWTHAPRS"     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+      <prefpane label="Preferences for RWTH APRS plugin">
+        <preferences>
+          <preference id="rwthaprs-filters" name="extensions.rwthaprs.filters" type="string" default="p/DB6AC" />
+          <preference id="rwthaprs-apikey" name="extensions.rwthaprs.apikey" type="string" />
+        </preferences>
+        <label value="Callsigns"/>
+        <groupbox>
+          <caption label="Settings"/>
+          <grid>
+            <columns>
+              <column flex="1"/>
+              <column flex="1"/>
+            </columns>
+            <rows>
+              <row flex="1">
+                <label control="filters" value="API-Key"/>
+                <textbox id="filters" preference="rwthaprs-apikey" value="API-Key"/>
+              </row>
+              <row flex="1">
+                <script>function updatefilter(){
+			var list=document.getElementById('CallList');
+			var filterstring='filter ';
+			for (i=0;i<list.itemCount;i++){
+			filterstring=filterstring+'p/'+list.getItemAtIndex(i)+' ';
+			}
+			window.alert(filterstring);				
+			}
+function addcall(){var list=document.getElementById('CallList');var call=document.getElementById('Call');list.appendItem(call.value);}function removecall(){var list=document.getElementById('CallList');list.removeItemAt(list.selectedIndex); }</script>
+                <box>
+                  <button label="add" oncommand="addcall()"/>
+                  <button label="remove" oncommand="removecall()"/>
+                  <label value="Callsign" control="Call"/>
+                  <textbox id="Call"/>
+                </box>
+              </row>
+            </rows>
+          </grid>
+        </groupbox>
+        <listbox id="CallList">
+          <listitem label="DB6AC"/>
+          <listitem label="DH3WR"/>
+        </listbox>
+      </prefpane>
+    </prefwindow>

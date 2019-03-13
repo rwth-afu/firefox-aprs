@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<overlay id="toverlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script src="rwthaprs.js" />
+	<menupopup id="menu_ToolsPopup" >
+
+		<menuitem id="rwthaprs" label="RWTH APRS-Plugin" insertafter="javascriptConsole" oncommand="RWTHAPRS.testobject.test(event);"/>
+
+	</menupopup>
+	<statusbar id="status-bar">
+
+		<statusbarpanel label="RWTH APRS-Plugin installed"/>
+
+	</statusbar>
+
+</overlay>

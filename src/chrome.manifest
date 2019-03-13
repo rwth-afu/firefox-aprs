@@ -1,0 +1,7 @@
+content     rwthaprs    chrome/content/
+
+content     rwthaprs    chrome/content/ contentaccessible=yes
+
+overlay chrome://browser/content/browser.xul chrome://rwthaprs/content/browser.xul
+
+

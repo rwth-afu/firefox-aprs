@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://rwthaprs/skin/skin.css" type="text/css"?> 
+<!DOCTYPE linktargetfinder SYSTEM "chrome://rwthaprs/locale/translations.dtd">
+<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<menubar id="main-menubar">
+	<menubar id="main-menubar"
+                style="border:0px;padding:0px;margin:0px;-moz-appearance:none">
+		<menupopup id="test">
+		<menuitem label="rwthaprs"/> 
+		</menupopup>
+	</menupopup>
+</menubar>
+</overlay>
